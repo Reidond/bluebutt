@@ -4,7 +4,8 @@ set -ouex pipefail
 
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable flatpak-system-update.timer
-systemctl enable mullvad-daemon
+
+systemctl enable '/opt/Mullvad VPN/resources/mullvad-daemon.service'
 
 systemctl --global enable flatpak-user-update.timer
 
