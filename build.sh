@@ -16,17 +16,19 @@ if [[ "${#EXCLUDED_PACKAGES[@]}" -gt 0 ]]; then
     EXCLUDED_PACKAGES=($(rpm -qa --queryformat='%{NAME} ' ${EXCLUDED_PACKAGES[@]}))
 fi
 
-wget -P /tmp/rpms \
+wget -nv -P /tmp/rpms \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${RELEASE}.noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${RELEASE}.noarch.rpm
 
-wget -P /tmp/rpms https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
-
-wget -P /tmp/rpms https://mullvad.net/media/app/MullvadVPN-2023.2_x86_64.rpm
+wget -nv -P /tmp/rpms https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 
 rpm-ostree install \
     /tmp/rpms/*.rpm \
     fedora-repos-archive
+
+wget -nv -P /tmp/rpms https://mullvad.net/media/app/MullvadVPN-2023.2_x86_64.rpm
+
+rpm-ostree install /tmp/rpms/MullvadVPN-2023.2_x86_64.rpm
 
 if [[ "${#INCLUDED_PACKAGES[@]}" -gt 0 && "${#EXCLUDED_PACKAGES[@]}" -eq 0 ]]; then
     rpm-ostree install \
