@@ -18,9 +18,11 @@ fi
 
 wget -P /tmp/rpms \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${RELEASE}.noarch.rpm \
-    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${RELEASE}.noarch.rpm \
-    https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm \
-    https://mullvad.net/download/app/rpm/latest
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${RELEASE}.noarch.rpm
+
+wget -P /tmp/rpms https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+
+wget -P /tmp/rpms https://mullvad.net/media/app/MullvadVPN-2023.2_x86_64.rpm
 
 rpm-ostree install \
     /tmp/rpms/*.rpm \
