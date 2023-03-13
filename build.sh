@@ -29,7 +29,7 @@ rpm-ostree install \
 wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest
 
 semanage fcontext -a -e /opt '/usr/lib/opt/Mullvad.VPN'
-rpm-ostree install ./MullvadVPN-*.rpm
+rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm
 sudo ln -s '/usr/lib/opt/Mullvad VPN' '/opt/Mullvad VPN'
 
 if [[ "${#INCLUDED_PACKAGES[@]}" -gt 0 && "${#EXCLUDED_PACKAGES[@]}" -eq 0 ]]; then
