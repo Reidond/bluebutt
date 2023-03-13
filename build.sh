@@ -28,7 +28,7 @@ rpm-ostree install \
 
 wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest
 
-ln -s '/usr/lib/opt/Mullvad VPN' '/opt/Mullvad VPN'
+ln -s '/usr/lib/opt/Mullvad VPN' /opt
 semanage fcontext -a -t usr_t '/usr/lib/opt/Mullvad.VPN(/.*)?'
 rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm
 
