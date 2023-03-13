@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Reidond/bluebutt/compare/v1.0.0...v1.0.1) (2023-03-13)
+
+
+### Bug Fixes
+
+* ughhh ([8facaac](https://github.com/Reidond/bluebutt/commit/8facaacfe327a2d74810e25867dcc52ce641b366))
+
 ## 1.0.0 (2023-03-13)
 
 
