@@ -26,11 +26,11 @@ rpm-ostree install \
     /tmp/rpms/*.rpm \
     fedora-repos-archive
 
-wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest
-
-ln -s '/opt/Mullvad VPN' /usr/lib/opt
-semanage fcontext -a -t usr_t '/usr/lib/opt/Mullvad.VPN(/.*)?'
-rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm
+# TODO: nothing helps...
+# wget --content-disposition -nv -P /tmp/rpms https://mullvad.net/download/app/rpm/latest
+# ln -s '/opt/Mullvad VPN' /usr/lib/opt
+# semanage fcontext -a -t usr_t '/usr/lib/opt/Mullvad.VPN(/.*)?'
+# rpm-ostree install /tmp/rpms/MullvadVPN-*.rpm
 
 if [[ "${#INCLUDED_PACKAGES[@]}" -gt 0 && "${#EXCLUDED_PACKAGES[@]}" -eq 0 ]]; then
     rpm-ostree install \
