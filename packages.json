@@ -5,6 +5,8 @@
                 "distrobox",
                 "ffmpeg",
                 "ffmpeg-libs",
+                "fzf",
+                "htop",
                 "just",
                 "kernel-devel-matched",
                 "libva-intel-driver",
@@ -15,7 +17,8 @@
                 "openssl",
                 "pipewire-codec-aptx",
                 "smartmontools",
-                "vim"
+                "vim",
+                "zstd"
             ],
             "silverblue": [
                 "ffmpegthumbnailer",
