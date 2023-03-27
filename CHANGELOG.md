@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0](https://github.com/Reidond/bluebutt/compare/v1.0.1...v1.1.0) (2023-03-27)
+
+
+### Features
+
+* add fzf for better just support ([#84](https://github.com/Reidond/bluebutt/issues/84)) ([3f9d939](https://github.com/Reidond/bluebutt/commit/3f9d9398ca7b1754234ef06111b66037b2f3531b))
+* Add htop package ([#82](https://github.com/Reidond/bluebutt/issues/82)) ([af2b3cf](https://github.com/Reidond/bluebutt/commit/af2b3cfd1f3d8a0e52c03166a553d5f33e156638))
+* add repography ([#66](https://github.com/Reidond/bluebutt/issues/66)) ([95d2e62](https://github.com/Reidond/bluebutt/commit/95d2e62e2e90d7a5f5f76569678e522441e7972f))
+* add zstd ([#63](https://github.com/Reidond/bluebutt/issues/63)) ([4307b8b](https://github.com/Reidond/bluebutt/commit/4307b8bc3fe6f087c0251f0e7105ac173035baac))
+
+
+### Bug Fixes
+
+* maintain the current oci version label ([#89](https://github.com/Reidond/bluebutt/issues/89)) ([be7faed](https://github.com/Reidond/bluebutt/commit/be7faeda71ca2a96e0471d0fada59052b8db3c3d))
+* Readme update ([#74](https://github.com/Reidond/bluebutt/issues/74)) ([e290cbf](https://github.com/Reidond/bluebutt/commit/e290cbfd0503598994cc7fee18dde883373783a2))
+* remove standalone date tag ([#80](https://github.com/Reidond/bluebutt/issues/80)) ([edb67aa](https://github.com/Reidond/bluebutt/commit/edb67aa48326ac59891e8e28779c0d2b05a92f0f))
+* Reorder und add more info about distrobox to README ([#73](https://github.com/Reidond/bluebutt/issues/73)) ([f8bf5bd](https://github.com/Reidond/bluebutt/commit/f8bf5bdac57f777050da058b7590339254847467))
+
 ## [1.0.1](https://github.com/Reidond/bluebutt/compare/v1.0.0...v1.0.1) (2023-03-13)
 
 
