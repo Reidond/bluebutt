@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Reidond/bluebutt/compare/v1.1.0...v1.2.0) (2023-04-15)
+
+
+### Features
+
+* add apr and apr-util ([#92](https://github.com/Reidond/bluebutt/issues/92)) ([ade520f](https://github.com/Reidond/bluebutt/commit/ade520f7e50a12b40672b50b184fba6a41e2d002))
+
 ## [1.1.0](https://github.com/Reidond/bluebutt/compare/v1.0.1...v1.1.0) (2023-03-27)
 
 
