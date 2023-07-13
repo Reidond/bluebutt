@@ -2,29 +2,58 @@
     "all": {
         "include": {
             "all": [
+                "alsa-firmware",
                 "apr",
                 "apr-util",
                 "distrobox",
                 "ffmpeg",
                 "ffmpeg-libs",
+                "ffmpegthumbnailer",
                 "fzf",
+                "grub2-tools-extra",
+                "heif-pixbuf-loader",
                 "htop",
+                "intel-media-driver",
                 "just",
                 "kernel-devel-matched",
+                "kernel-tools",
+                "libheif-freeworld",
+                "libheif-tools",
+                "libratbag-ratbagd",
                 "libva-intel-driver",
                 "libva-utils",
+                "lshw",
                 "mesa-va-drivers-freeworld",
+                "net-tools",
+                "google-noto-sans-javanese-fonts",
+                "google-noto-sans-balinese-fonts",
+                "google-noto-sans-sundanese-fonts",
                 "nvme-cli",
                 "nvtop",
+                "openrgb-udev-rules",
                 "openssl",
+                "podman-compose",
                 "pipewire-codec-aptx",
                 "smartmontools",
+                "symlinks",
+                "tcpdump",
+                "tmux",
+                "traceroute",
                 "vim",
-                "zstd"
+                "zstd",
+                "wireguard-tools"
             ],
             "silverblue": [
-                "ffmpegthumbnailer",
-                "gnome-tweaks"
+                "adw-gtk3-theme",
+                "gnome-tweaks",
+                "raw-thumbnailer"
+            ],
+            "kinoite": [
+                "icoutils",
+                "kate",
+                "kcron",
+                "kio-admin",
+                "ksshaskpass"
             ],
             "lxqt": [
                 "breeze-cursor-theme",
@@ -55,6 +84,7 @@
                 "openbox",
                 "pcmanfm-qt",
                 "perl-File-MimeInfo",
+                "qt5-qtimageformats",
                 "qterminal",
                 "sddm",
                 "sddm-themes",
@@ -145,6 +175,7 @@
                 "pipewire-alsa",
                 "pipewire-pulseaudio",
                 "pluma",
+                "raw-thumbnailer",
                 "seahorse",
                 "seahorse-caja",
                 "setroubleshoot",
@@ -159,6 +190,10 @@
             ],
             "sericea": [
                 "tumbler"
+            ],
+            "vauxite": [
+                "raw-thumbnailer",
+                "xfce4-clipman-plugin"
             ]
         },
         "exclude": {
@@ -172,6 +207,10 @@
                 "libswresample-free",
                 "libswscale-free",
                 "mesa-va-drivers"
+            ],
+            "kinoite": [
+                "ffmpegthumbnailer",
+                "kwrite"
             ],
             "mate": [
                 "python3-unbound",
@@ -201,6 +240,9 @@
                 "f38-backgrounds-extras-base",
                 "f38-backgrounds-extras-mate",
                 "f38-backgrounds-mate"
+            ],
+            "kinoite":[
+                "xwaylandvideobridge"
             ]
         },
         "exclude": {
