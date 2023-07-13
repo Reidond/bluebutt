@@ -41,7 +41,8 @@
                 "traceroute",
                 "vim",
                 "zstd",
-                "wireguard-tools"
+                "wireguard-tools",
+                "solaar"
             ],
             "silverblue": [
                 "adw-gtk3-theme",
