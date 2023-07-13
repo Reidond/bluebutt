@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         # image_name: [silverblue, kinoite, vauxite, sericea, base, lxqt, mate]
-        image_name: [silverblue]
+        image_name: [silverblue, kinoite]
         # major_version: [37, 38]
         major_version: [38]
         include:
