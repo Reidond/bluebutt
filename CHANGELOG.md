@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.8.0](https://github.com/Reidond/bluebutt/compare/v1.7.0...v1.8.0) (2023-07-17)
+
+
+### Features
+
+* install yafti ([acd0076](https://github.com/Reidond/bluebutt/commit/acd0076cdbdd97cbcc199119f1fae5ac3b666068))
+
+
+### Bug Fixes
+
+* add python ([801b7f1](https://github.com/Reidond/bluebutt/commit/801b7f109fffdbfcb7c063aad79d5fa65c4c98d9))
+
 ## [1.7.0](https://github.com/Reidond/bluebutt/compare/v1.6.0...v1.7.0) (2023-07-13)
 
 
