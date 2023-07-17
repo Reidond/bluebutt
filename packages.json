@@ -42,7 +42,9 @@
                 "vim",
                 "zstd",
                 "wireguard-tools",
-                "solaar"
+                "solaar",
+                "python3",
+                "python3-pip"
             ],
             "silverblue": [
                 "adw-gtk3-theme",
