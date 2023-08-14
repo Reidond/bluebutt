@@ -57,42 +57,42 @@ To rebase an existing Silverblue/Kinoite machine to the latest release (38):
 
 **Silverblue (GNOME):**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/silverblue-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/silverblue-main:38
 
 **Kinoite (KDE)**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/kinoite-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/kinoite-main:38
     
 **LXQt**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/lxqt-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/lxqt-main:38
     
 **MATE**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/mate-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/mate-main:38
     
 **Sericea (Sway)** 
 Recommended only for advanced users
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/sericea-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/sericea-main:38
 
 **Vauxite (XFCE)**
     
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/vauxite-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/vauxite-main:38
 
 **Base**
 
 Which does not come with any desktops or window managers:
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/base-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/base-main:38
     
 </details>
 
 ## Verification
 
-These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
+These images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/ublue-os/base
+    cosign verify --key cosign.pub ghcr.io/ublue-os/silverblue-main
 
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
 
@@ -116,7 +116,7 @@ AutomaticUpdatePolicy=check
 
 ## Making your own
 
-See [the documentation](https://ublue.it/making-your-own/) on how use this image in your own projects.
+See [the documentation](https://universal-blue.org/tinker/make-your-own/) on how use this image in your own projects.
 
 ## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/35181738/ublue-os/main/recent-activity/xrA_PaNuNMQaiMXAgCjt1WHFLAbONeWxJABDiQSIMJI/sadhuTBbL8fbqM2jXKHWg-T1EsqHwZ2NlnlT6FB-e7Q_badge.svg)](https://repography.com)
 [![Timeline graph](https://images.repography.com/35181738/ublue-os/main/recent-activity/xrA_PaNuNMQaiMXAgCjt1WHFLAbONeWxJABDiQSIMJI/sadhuTBbL8fbqM2jXKHWg-T1EsqHwZ2NlnlT6FB-e7Q_timeline.svg)](https://github.com/ublue-os/main/commits)

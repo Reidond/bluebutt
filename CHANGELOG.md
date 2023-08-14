@@ -1,6 +1,7 @@
 # Changelog
 
 ## [1.7.0](https://github.com/Reidond/bluebutt/compare/v1.6.0...v1.7.0) (2023-07-13)
+## [1.7.0](https://github.com/ublue-os/main/compare/v1.6.0...v1.7.0) (2023-08-08)
 
 
 ### Features
@@ -55,6 +56,9 @@
 * switch the latest tag to F38 ([#177](https://github.com/Reidond/bluebutt/issues/177)) ([9aca46a](https://github.com/Reidond/bluebutt/commit/9aca46a742d9128e9b22bfbc5e380f5394ee269a))
 * use custom repos provided by akmods ([#236](https://github.com/Reidond/bluebutt/issues/236)) ([efe5364](https://github.com/Reidond/bluebutt/commit/efe53640acc871ed2d60903774577e8a5565672c))
 * use tagged release for isogenerator ([#155](https://github.com/Reidond/bluebutt/issues/155)) ([f7d05b4](https://github.com/Reidond/bluebutt/commit/f7d05b4f58096fa87df920523390cfe51774cdee))
+* Add alsa-firmware package needed for some sound cards ([#270](https://github.com/ublue-os/main/issues/270)) ([0eb781b](https://github.com/ublue-os/main/commit/0eb781b117f90437ab68eeee442bdffbf0d966b0))
+* add clipman for sericea ([#273](https://github.com/ublue-os/main/issues/273)) ([09c59b5](https://github.com/ublue-os/main/commit/09c59b5ec03c49d8c34f8344d87e5ddbdca8e217))
+* remove xwaylandvideobridge ([#284](https://github.com/ublue-os/main/issues/284)) ([477e15a](https://github.com/ublue-os/main/commit/477e15a26fd0aaf8c75d8ceca90175457a9e256b))
 
 
 ### Bug Fixes
@@ -183,6 +187,10 @@
 * wrong mullvad name ([c23971c](https://github.com/Reidond/bluebutt/commit/c23971c063e1e69fbc6f7ed161671f928b7050af))
 
 ## 1.0.0 (2023-02-04)
+* Be selective in which kmods are brought into main. ([#278](https://github.com/ublue-os/main/issues/278)) ([aac58b0](https://github.com/ublue-os/main/commit/aac58b0480d8c8a0a44aae1882e2288547a0fde1))
+* **Kinoite:** Remove Discover rpm-ostree plugin ([#282](https://github.com/ublue-os/main/issues/282)) ([7a011ff](https://github.com/ublue-os/main/commit/7a011ff719e351ee53ccb3da27fe4083e0423028))
+
+## [1.6.0](https://github.com/ublue-os/main/compare/v1.5.0...v1.6.0) (2023-06-30)
 
 
 ### Features
