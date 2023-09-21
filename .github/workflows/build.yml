@@ -20,15 +20,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_flavor: [main, nvidia]
-        image_name: [silverblue, kinoite, vauxite, sericea, base, lxqt, mate, onyx]
-        major_version: [37, 38, 39]
-        nvidia_version: [0, 470, 535]
+        image_flavor: [main]
+        image_name: [silverblue, kinoite]
+        major_version: [38, 39]
+        nvidia_version: []
         include:
-          - major_version: 37
-            is_latest_version: false
-            is_stable_version: true
-            is_gts_version: false
           - major_version: 38
             is_latest_version: true
             is_stable_version: true
@@ -37,26 +33,6 @@ jobs:
             is_latest_version: true
             is_stable_version: false
             is_gts_version: false
-          - nvidia_version: 535
-            is_latest_nvidia: true
-        exclude:
-          # There is no Fedora 37 version of sericea
-          # When F38 is added, sericea will automatically be built too
-          - image_name: sericea
-            major_version: 37
-          # There is no Fedora 37 or 38 version of onyx
-          - image_name: onyx
-            major_version: 37
-          - image_name: onyx
-            major_version: 38
-          - image_name: vauxite
-            major_version: 39
-          - image_flavor: main
-            nvidia_version: 470
-          - image_flavor: main
-            nvidia_version: 535
-          - image_flavor: nvidia
-            nvidia_version: 0
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
