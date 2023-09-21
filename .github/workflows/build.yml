@@ -23,7 +23,6 @@ jobs:
         image_flavor: [main]
         image_name: [silverblue, kinoite]
         major_version: [38, 39]
-        nvidia_version: []
         include:
           - major_version: 38
             is_latest_version: true
@@ -53,7 +52,7 @@ jobs:
         run: |
           # Generate a timestamp for creating an image version history
           TIMESTAMP="$(date +%Y%m%d)"
-          VARIANT="${{ 'nvidia' == matrix.image_flavor && format('{0}-{1}', matrix.major_version, matrix.nvidia_version) || format('{0}', matrix.major_version) }}"
+          VARIANT="${{ format('{0}', matrix.major_version) }}"
 
           COMMIT_TAGS=()
           BUILD_TAGS=()
@@ -152,7 +151,6 @@ jobs:
             IMAGE_NAME=${{ matrix.image_name }}
             SOURCE_IMAGE=${{ env.SOURCE_IMAGE }}
             FEDORA_MAJOR_VERSION=${{ matrix.major_version }}
-            NVIDIA_MAJOR_VERSION=${{ matrix.nvidia_version }}
           labels: ${{ steps.meta.outputs.labels }}
           oci: false
           extra-args: |
