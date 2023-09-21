@@ -6,10 +6,10 @@ RELEASE="$(rpm -E %fedora)"
 
 INCLUDED_PACKAGES=($(jq -r "[(.all.include | (.all, select(.\"$IMAGE_NAME\" != null).\"$IMAGE_NAME\")[]), \
                              (select(.\"$FEDORA_MAJOR_VERSION\" != null).\"$FEDORA_MAJOR_VERSION\".include | (.all, select(.\"$IMAGE_NAME\" != null).\"$IMAGE_NAME\")[])] \
-                             | sort | unique[]" /tmp/packages.json))
+                             | sort | unique[]" /tmp/main-packages.json))
 EXCLUDED_PACKAGES=($(jq -r "[(.all.exclude | (.all, select(.\"$IMAGE_NAME\" != null).\"$IMAGE_NAME\")[]), \
                              (select(.\"$FEDORA_MAJOR_VERSION\" != null).\"$FEDORA_MAJOR_VERSION\".exclude | (.all, select(.\"$IMAGE_NAME\" != null).\"$IMAGE_NAME\")[])] \
-                             | sort | unique[]" /tmp/packages.json))
+                             | sort | unique[]" /tmp/main-packages.json))
 
 
 if [[ "${#EXCLUDED_PACKAGES[@]}" -gt 0 ]]; then
@@ -38,9 +38,15 @@ for REPO in $(rpm -ql ublue-os-akmods-addons|grep ^"/etc"|grep repo$); do
     sed -i '0,/enabled=0/{s/enabled=0/enabled=1/}' ${REPO}
 done
 
-rpm-ostree install \
-    /tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
-    /tmp/akmods-rpms/kmods/*xpadneo*.rpm
+# Only run if FEDORA_MAJOR_VERSION is not 39
+if grep -qv "39" <<< $FEDORA_MAJOR_VERSION; then
+    rpm-ostree install \
+        /tmp/akmods-rpms/kmods/*xpadneo*.rpm \
+        /tmp/akmods-rpms/kmods/*xpad-noone*.rpm \
+        /tmp/akmods-rpms/kmods/*xone*.rpm \
+        /tmp/akmods-rpms/kmods/*openrazer*.rpm \
+        /tmp/akmods-rpms/kmods/*v4l2loopback*.rpm
+fi
 
 for REPO in $(rpm -ql ublue-os-akmods-addons|grep ^"/etc"|grep repo$); do
     echo "akmods: disable per defaults: ${REPO}"
@@ -60,3 +66,6 @@ elif [[ "${#INCLUDED_PACKAGES[@]}" -gt 0 && "${#EXCLUDED_PACKAGES[@]}" -gt 0 ]];
 else
     echo "No packages to install."
 fi
+
+## install packages direct from github
+/tmp/github-release-install.sh sigstore/cosign x86_64
