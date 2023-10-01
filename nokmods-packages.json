@@ -3,6 +3,7 @@
         "include": {
             "all": [
                 "alsa-firmware",
+                "android-udev-rules",
                 "apr",
                 "apr-util",
                 "distrobox",
@@ -15,8 +16,6 @@
                 "htop",
                 "intel-media-driver",
                 "just",
-                "kernel-devel-matched",
-                "kernel-tools",
                 "libheif-tools",
                 "libratbag-ratbagd",
                 "libva-intel-driver",
@@ -30,7 +29,9 @@
                 "nvme-cli",
                 "nvtop",
                 "openrgb-udev-rules",
+                "solaar-udev",
                 "openssl",
+                "oversteer-udev",
                 "podman-compose",
                 "pipewire-codec-aptx",
                 "smartmontools",
@@ -264,6 +265,9 @@
             ],
             "vauxite": [
                 "raw-thumbnailer"
+            ],
+            "kinoite": [
+                "xwaylandvideobridge"
             ]
         },
         "exclude": {
@@ -272,7 +276,10 @@
     },
     "39": {
         "include": {
-            "all": []
+            "all": [],
+            "kinoite": [
+                "xwaylandvideobridge"
+            ]
         },
         "exclude": {
             "all": [
