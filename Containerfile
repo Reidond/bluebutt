@@ -11,11 +11,8 @@ ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-38}"
 COPY etc /etc
 COPY usr /usr
 
-COPY github-release-install.sh /tmp/github-release-install.sh
-COPY main-install.sh /tmp/main-install.sh
-COPY main-post-install.sh /tmp/main-post-install.sh
-COPY main-packages.json /tmp/main-packages.json
-COPY github-release-install.sh \
+COPY main-install.sh \
+     github-release-install.sh \
      nokmods-install.sh \
      nokmods-post-install.sh \
      nokmods-packages.json \
