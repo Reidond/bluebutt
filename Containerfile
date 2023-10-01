@@ -15,8 +15,7 @@ COPY github-release-install.sh /tmp/github-release-install.sh
 COPY main-install.sh /tmp/main-install.sh
 COPY main-post-install.sh /tmp/main-post-install.sh
 COPY main-packages.json /tmp/main-packages.json
-COPY github-release-install.sh \
-     nokmods-install.sh \
+COPY nokmods-install.sh \
      nokmods-post-install.sh \
      nokmods-packages.json \
         /tmp/
@@ -48,7 +47,6 @@ ARG IMAGE_NAME="${IMAGE_NAME:-silverblue}"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-38}"
 
 COPY main-install.sh /tmp/main-install.sh
-COPY main-sys_files /
 
 COPY --from=ghcr.io/ublue-os/akmods:main-${FEDORA_MAJOR_VERSION} /rpms /tmp/akmods-rpms
 
