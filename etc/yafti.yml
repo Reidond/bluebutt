@@ -102,7 +102,7 @@ screens:
     source: yafti.screen.title
     values:
       title: "All done!"
-      icon: "/path/to/icon"
+      icon: "/usr/share/yafti-assets/120078124.png"
       links:
         - "Install More Applications":
             run: /usr/bin/gnome-software
